@@ -5,17 +5,27 @@
  */
 package game;
 
+import game.Startup;
+import game.Player;
+
+import java.util.Scanner;
+
 /**
  *
  * @author dod98
  */
 public class Game {
 
+    
+    public static Player player;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        player = Startup.Startup();
+        
     }
+
     
 }
