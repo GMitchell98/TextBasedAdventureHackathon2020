@@ -5,6 +5,9 @@
  */
 package game;
 
+import game.Items.Armour;
+import game.Items.Item;
+import game.Items.Weapon;
 import java.util.ArrayList;
 import game.enemies.Enemy;
 
