@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package game;
+
+/**
+ *
+ * @author dod98
+ */
+public class Game {
+
+    public Room currentRoom;
+    public Room previousRoom;
+    public int zoneNumber;
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Room currentRoom = new Room();
+        Room previousRoom = new Room();
+        
+        // Idea of flow...
+        currentRoom.generateFirstTutorialRoom();
+        previousRoom = currentRoom;
+        // Complete the first room then...
+        currentRoom.generateSecondTutorialRoom();
+        previousRoom = currentRoom;
+        // Complete the second room then...
+        currentRoom.generateThirdTutorialRoom();
+        previousRoom = currentRoom;
+        // Complete the third room then...
+        // Once third room is complete, you have finished zone 0.
+        
+        // Now begins Zone 1.
+        // It starts with generating a beginning "Node" room.
+        currentRoom.generateRandomRoom("North");
+        // North is specified above as the room that one just came from
+        // was exited via the north. This will then indicate that the
+        // randomly generated room must have an exit to the south. 
+        // A 50/50 chance will determine whether there are exits to the
+        // north, east or west. If no exits are created by random chance, 
+        // pick a direction at random (33/33/33 chance) to be given an exit.
+        
+        // Need a method to generate a random node room when a new zone is 
+        // reached.
+        
+    }
+    
+    /*public void createFirstTutorialRoom() {
+        currentRoom = new Room("Tutorial One", "A dark cave in which"
+                + "only a light hum can be heard. Three weapons lie in the "
+                + "centre");
+        currentRoom.generateTutorialWeapons();
+        currentRoom.setNorth(true);
+    }
+    
+    public void createSecondTutorialRoom() {
+        currentRoom = new Room("Tutorial Two", "A dark cave in which"
+                + "a faint fumbling can be heard in the next room. Three kinds "
+                + "of armour lie in the centre.");
+        currentRoom.generateTutorialArmour();
+        currentRoom.setNorth(true);
+    }
+    
+    public void createThirdTutorialRoom() {
+        currentRoom = new Room("Tutorial Three", "The cave is lighter now. "
+                + "There is a way out at the other side, but a dagger wielding "
+                + "goblin blocks your path.");
+        currentRoom.generateTutorialEnemy();
+        currentRoom.setNorth(true);
+    }*/
+    
+}
