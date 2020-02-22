@@ -16,6 +16,7 @@ public class Fight {
 
     public Player player;
     public Enemy enemy;
+    public HealPotion healPotion;
     
     //get the Player informations
     public Player getPlayer(){
@@ -32,8 +33,31 @@ public class Fight {
             System.out.println(enemy.getEName + " has " //need to create getEName toi get monster's name 
                     + enemy.getCurrenthp()
                     + " HP left.");
-            System.out.println("Please choose from the following Options: 1(Attack), 2(Flee), 3(Open Inventar)");
+            System.out.println("Please choose from the following Options: 1(Attack), 2(Flee), 3(Use Heal potion)");
             // create input for options
+            int optionNum = in.scanner();
+            switch(optionNum){
+                case 1 :
+                    enemy.setCurrenthp(enemy.getCurrenthp()- player.getAtt());
+                    return enemy.setCurrenthp();
+                    System.out.println("You have attacked with " + player.weapon 
+                            +  " and dealt " + player.getAtt() + " demanage.");
+                    break;
+                case 2:
+                    // write run method after room builder is done
+                case 3:
+                    player.setHp(player.currenthp + healPotion.hpeffect);
+                    if(player.setHp()>player.maxhp){
+                        player.setHp()== player.maxhp;
+                        return player.setHp();
+                    }
+                    System.out.println("You have used a Heal Potion and helaed yourself " + healPotion.hpeffect
+                    + "HP and are now at " + player.currenthp
+                    + " from " + player.maxhp
+                    + " maximal HP");
+                    break;
+            }
+            player.setHp(enemy.);
             }
             else{
                 System.out.println("GAME OVER");
@@ -41,5 +65,4 @@ public class Fight {
             }
         }
     }
-    public void 
 }
