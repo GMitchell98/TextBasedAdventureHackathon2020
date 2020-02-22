@@ -46,8 +46,23 @@ public class Player {
     }
 
     public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-        
+        if(weapon.isEquipped()== true){
+            System.out.println("You have already got this equipped");
+        }
+        else{
+            this.weapon = weapon;
+            weapon.setEquipped(true);
+            if(weapon.getType()==1){
+                att =weapon.getDmg() +str;
+            }
+            if(weapon.getType()==2){
+                att = weapon.getDmg()+dex;
+            }
+            else{
+                System.out.println("The weapon is broken");
+                inventory.remove(weapon);
+            }
+        }
     }
 
     public Item getArmour() {
@@ -55,7 +70,26 @@ public class Player {
     }
 
     public void setArmour(Armour armour) {
-        this.armour = armour;
+        if(armour.isEquipped()== true){
+           System.out.println("You have already got this equipped");
+        }
+        else{
+            this.armour = armour;
+            armour.setEquipped(true);
+            if(armour.getType()==1){
+                def =armour.getDef() +str;
+                dex-=5;
+            }
+            if(armour.getType()==2){
+                def = armour.getDef() +dex;
+                str-=5;
+            }
+            else{
+                System.out.println("The armour is broken");
+                inventory.remove(armour);
+            }
+        }
+        
     }
     
 

@@ -12,10 +12,13 @@ package game;
 public class Weapon  extends Item{
     
     int dmg;
+    boolean equipped;
+    int type;
  
-    public Weapon(String name, String desc, int dmg) {
+    public Weapon(String name, String desc, int dmg, int type) {
         super(name, desc);
         this.dmg =dmg;
+        this.type =type;
     }
 
     public int getDmg() {
@@ -24,6 +27,18 @@ public class Weapon  extends Item{
 
     public void setDmg(int dmg) {
         this.dmg = dmg;
+    }
+
+    public void setEquipped(boolean equipped) {
+        this.equipped = equipped;
+    }
+
+    public boolean isEquipped() {
+        return equipped;
+    }
+
+    public int getType() {
+        return type;
     }
     
     
