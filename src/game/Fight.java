@@ -28,9 +28,9 @@ public class Fight {
     }
    // Create the Fight instance/flow
     public void setFight(){
-        while(enemy.getCurrenthp()>0){//nothinh
+        while(enemy.getCurrenthp()>0){
             if(player.currenthp >0){
-            System.out.println(enemy.getEName + " has " //need to create getEName toi get monster's name 
+            System.out.println(enemy.getName() + " has " //need to create getEName toi get monster's name 
                     + enemy.getCurrenthp()
                     + " HP left.");
             System.out.println("Please choose from the following Options: 1(Attack), 2(Flee), 3(Use Heal potion)");
@@ -39,7 +39,7 @@ public class Fight {
             switch(optionNum){
                 case 1 :
                     enemy.setCurrenthp(enemy.getCurrenthp()- player.getAtt());
-                    return enemy.setCurrenthp();
+                   // return enemy.setCurrenthp();
                     System.out.println("You have attacked with " + player.weapon 
                             +  " and dealt " + player.getAtt() + " demanage.");
                     break;
@@ -47,9 +47,9 @@ public class Fight {
                     // write run method after room builder is done
                 case 3:
                     player.setHp(player.currenthp + healPotion.hpeffect);
-                    if(player.setHp()>player.maxhp){
-                        player.setHp()== player.maxhp;
-                        return player.setHp();
+                    if(player.getHp()>player.maxhp){
+                        player.setHp(player.maxhp);
+                        //return player.setHp();
                     }
                     System.out.println("You have used a Heal Potion and helaed yourself " + healPotion.hpeffect
                     + "HP and are now at " + player.currenthp
