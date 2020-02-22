@@ -15,6 +15,11 @@ public class Enemy {
     int currenthp = maxhp;
     int exp;
     String desc;
+    int attack;
+    
+    public Enemy() {
+        
+    }
 
     public Enemy(String name,String desc, int maxhp, int exp) {
         this.name = name;
