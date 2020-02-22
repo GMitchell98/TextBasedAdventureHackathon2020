@@ -45,28 +45,17 @@ public class Player {
         return weapon;
     }
 
-    
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+        
+    }
 
     public Item getArmour() {
         return armour;
     }
 
-    public void equipArmour(Armour armour) {
+    public void setArmour(Armour armour) {
         this.armour = armour;
-    }
-    
-    public void equipWeapon(Weapon weapon) {
-        int type = weapon.getType();
-        if(type ==1){
-            att = weapon.getDmg()+str;
-        }
-        if(type ==2) {
-        att = weapon.getDmg()+dex;}
-        
-        else{
-            System.out.println("The weapon is broken");
-            inventory.remove(weapon);
-        }
     }
     
 

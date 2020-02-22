@@ -15,8 +15,6 @@ public class Armour extends Item {
     public Armour(String name, String desc,int def ) {
         super(name, desc);
         this.def =def;
-        this.name = name;
-        this.description=desc;
     }
 
     public int getDef() {

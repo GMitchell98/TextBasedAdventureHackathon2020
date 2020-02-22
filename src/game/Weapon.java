@@ -12,38 +12,22 @@ package game;
 public class Weapon  extends Item{
     
     int dmg;
-    boolean equipped;
-    int type;
  
-    public Weapon(String name, String desc, int dmg, int type) {
+    public Weapon(String name, String desc, int dmg) {
         super(name, desc);
         this.dmg =dmg;
-        this.type = type;
     }
 
     public int getDmg() {
         return dmg;
     }
 
-    public boolean isEquipped() {
-        return equipped;
-    }
-
-    public int getType() {
-        return type;
-    }
-    
-    
-    public void setEquiped(boolean equiped) {
-        this.equiped = equiped;
+    public void setDmg(int dmg) {
+        this.dmg = dmg;
     }
     
     
     
-    public Weapon dagger(){
-       Weapon dagger = new Weapon("Dagger","A short short-sword", 3,2);
-       return dagger;
-    }
     
     
     
