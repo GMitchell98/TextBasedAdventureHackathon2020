@@ -26,6 +26,10 @@ public class Enemy {
     public void setCurrenthp(int currenthp) {
         this.currenthp = currenthp;
     }
+
+    public int getCurrenthp() {
+        return currenthp;
+    }
     
     /* 
     
