@@ -28,7 +28,7 @@ public class Fight {
     }
    // Create the Fight instance/flow
     public void setFight(){
-        while(enemy.getCurrenthp()>0){
+        while(enemy.getCurrenthp()>0){//nothinh
             if(player.currenthp >0){
             System.out.println(enemy.getEName + " has " //need to create getEName toi get monster's name 
                     + enemy.getCurrenthp()
