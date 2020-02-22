@@ -26,6 +26,7 @@ public class Startup {
         int pStr = 0;
         int pDex =0;
 
+        //stat points
         int statpoints = 10;
         
         //name input
