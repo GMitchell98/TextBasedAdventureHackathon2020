@@ -16,6 +16,10 @@ public class HealPotion extends Item {
     public HealPotion(int hpeffect, String name, String desc) {
         super(name, desc);
         this.hpeffect = hpeffect;
+        this.name = name;
+        this.description = desc;
     }
+    
+    
     
 }
